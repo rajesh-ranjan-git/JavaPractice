@@ -21,6 +21,18 @@ public class ArrayUtility {
         return arr;
     }
 
+    public static String[] inputStrArray() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of array : ");
+        int size = sc.nextInt();
+        String[] arr = new String[size];
+        for (int i = 0; i < size; i++) {
+            System.out.print("arr[" + i + "] : ");
+            arr[i] = sc.next();
+        }
+        return arr;
+    }
+
     public static int[][] input2DArray() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter size of array. Row : ");
@@ -38,6 +50,18 @@ public class ArrayUtility {
     }
     
     public static void printArray(int[] arr) {
+        System.out.print("Array : [");
+        for (int i = 0; i < arr.length; i++) {
+            if (i < arr.length - 1) {
+                System.out.print(arr[i] + ", ");
+            } else {
+                System.out.print(arr[i] + "]");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void printArray(String[] arr) {
         System.out.print("Array : [");
         for (int i = 0; i < arr.length; i++) {
             if (i < arr.length - 1) {
